@@ -5,6 +5,7 @@
 
 package tema4;
 
+import javax.swing.JOptionPane;
 import org.apache.commons.lang3.RandomStringUtils;
 
 public class Ejercicio4B {
@@ -41,5 +42,19 @@ public class Ejercicio4B {
             System.out.println(password2);
         }
         
+    }
+    
+    public static String mostrarMenuInicial(){
+        
+        String menuInicial;
+        
+        do{
+        menuInicial = JOptionPane.showInputDialog("Elija una de las 3 opciones: \n"
+                + "1.- Crear pin para una tarjeta SIM \n"
+                + "2.- Crear contraseña para un SO (8 carácteres) \n"
+                + "3.- Crear contraseña eligiendo numero de carácteres");
+        }while(menuInicial==1 || menuInicial==2 || menuInicial==3);
+        
+        return menuInicial;
     }
 }
